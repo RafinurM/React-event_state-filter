@@ -9,7 +9,7 @@ function FilterItem(data) {
 
 
 function Toolbar(props) {
-    let toolbar = props.filters.map(element => <FilterItem data={element} func={props.onselectFilter} />);
+    let toolbar = props.filters.map((element, index) => <FilterItem key={index} data={element} func={props.onselectFilter} />);
     return (
         <ul>{toolbar}</ul>
     )
